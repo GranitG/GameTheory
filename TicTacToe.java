@@ -11,11 +11,9 @@ public class TicTacToe {
 	
 	
 	public static char TTTboard[][] = new char[3][3];
-	public static int computerMoveCounter = 1;
-	public static String compFirstMove;
-	public static boolean end = false;
+	public static boolean end = false;//when end = true, the game should end
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException{
 		
 		//creates the 3 x 3 Tic Tac Toe board for the user to see
 		
@@ -29,11 +27,7 @@ public class TicTacToe {
 		
 		System.out.println("A Game of Tic Tac Toe"
 							+"\n"
-							+ "\nAt the beginning, the Tic Tac Toe board looks like this:"
-							+ "\n\t---"
-							+ "\n\t---"
-							+ "\n\t---"
-							+"\nGet three O's in a row to win the game\"");
+							+"\nGet three X's or O's in a row to win the game");
 		
 		System.out.println("\nTo start, Enter s ");
 		
@@ -42,13 +36,13 @@ public class TicTacToe {
 		String input = scan.nextLine();
 		
 		if(input.equals("s"))
+			System.out.println("Beginning status of Tic Tac Toe board:"
+								+"\n");
 		{
-			System.out.println("\nComputer will be going first");
-			compMove();
 			
 			/**A while loops that prints the board until the variable end becomes true.
-			 * Each time the computer moves during their turn, this loop will print out the status of
-			 * the status of the board so the user can make their move
+			 * Each time a player makes a move during their turn, this loop will print out the status of
+			 * of the board so the users can make their move
 			 */
 			
 			while(!end)
@@ -65,7 +59,7 @@ public class TicTacToe {
 								  //also delays the printing so the user can think of their next move
 				
 				//Getting the input of the human
-				System.out.println("\nEnter your next move");
+				System.out.println("\nEnter your move");
 				System.out.println("\nList of moves, except for spaces already occupied "
 										+"\n"
 										+ "\n\t00  01  02"
@@ -110,43 +104,14 @@ public class TicTacToe {
 						TTTboard[2][2] = 'O';
 				}
 				
-				//Getting the computer's input
-				compMove();
+			
 			}
 		}
 	
 	}
-	public static void compMove()
-	{
-		Random random = new Random();
-		int h = random.nextInt(4) + 1;
-		//computer first move
-		if(computerMoveCounter == 1)
-		{
-			if(h == 1)
-			{
-				TTTboard[0][0] = 'X';
-				compFirstMove ="00";
-			}
-			else if(h == 2)
-			{
-				TTTboard[0][2] = 'X';
-				compFirstMove = "02";
-			}
-			else if(h == 3)
-			{
-				TTTboard[2][0] = 'X';
-				compFirstMove = "20";
-			}
-			else if(h == 4)
-			{
-				TTTboard[2][2] = 'X';
-				compFirstMove = "22";
-			}
-		}
-		computerMoveCounter++;
+
 	}
 
-}
+
 
 
