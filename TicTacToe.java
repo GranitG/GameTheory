@@ -58,50 +58,120 @@ public class TicTacToe {
 				Thread.sleep(2000);//to stop it from printing the board over and over.
 								  //also delays the printing so the user can think of their next move
 				
-				//Getting the input of the human
-				System.out.println("\nEnter your move");
+				//Getting the input of the player 1
+				System.out.println("\nEnter your move player 1");
 				System.out.println("\nList of moves, except for spaces already occupied "
 										+"\n"
 										+ "\n\t00  01  02"
 										+ "\n\t10  11  12"
 										+ "\n\t20  21  22");
 				//Listens for the move input of the user from the console
-				String move = scan.nextLine();
-				if(move.equals ("00") && TTTboard[0][0] == '-')
+				String move1 = scan.nextLine();
+				if(move1.equals ("00") && TTTboard[0][0] == '-')
 					{
 							TTTboard[0][0] = 'O';
 					}
-				if(move.equals ("01") && TTTboard[0][1] == '-')
+				if(move1.equals ("01") && TTTboard[0][1] == '-')
 				{
 						TTTboard[0][1] = 'O';
 				}
-				if(move.equals ("02") && TTTboard[0][2] == '-')
+				if(move1.equals ("02") && TTTboard[0][2] == '-')
 				{
 						TTTboard[0][2] = 'O';
 				}
-				if(move.equals ("10") && TTTboard[1][0] == '-')
+				if(move1.equals ("10") && TTTboard[1][0] == '-')
 				{
 						TTTboard[1][0] = 'O';
 				}
-				if(move.equals ("11") && TTTboard[1][1] == '-')
+				if(move1.equals ("11") && TTTboard[1][1] == '-')
 				{
 						TTTboard[1][1] = 'O';
 				}
-				if(move.equals ("12") && TTTboard[1][2] == '-')
+				if(move1.equals ("12") && TTTboard[1][2] == '-')
 				{
 						TTTboard[1][2] = 'O';
 				}
-				if(move.equals ("20") && TTTboard[2][0] == '-')
+				if(move1.equals ("20") && TTTboard[2][0] == '-')
 				{
 						TTTboard[2][0] = 'O';
 				}
-				if(move.equals ("21") && TTTboard[2][1] == '-')
+				if(move1.equals ("21") && TTTboard[2][1] == '-')
 				{
 						TTTboard[2][1] = 'O';
 				}
-				if(move.equals ("22") && TTTboard[2][2] == '-')
+				if(move1.equals ("22") && TTTboard[2][2] == '-')
 				{
 						TTTboard[2][2] = 'O';
+				}
+				
+				while(!end)
+				{
+					for(int i = 0; i < 3; i++)
+					{
+						for(int j = 0; j < 3; j++)
+						{
+							System.out.print(TTTboard[i][j]+ " ");
+						}
+						System.out.println();
+					}
+					Thread.sleep(2000);
+					
+				//getting move of player 2
+				System.out.println("\nEnter your move player 2");
+				System.out.println("\nList of moves, except for spaces already occupied "
+										+"\n"
+										+ "\n\t00  01  02"
+										+ "\n\t10  11  12"
+										+ "\n\t20  21  22");
+				//Listens for the move input of the user from the console
+				String move2 = scan.nextLine();
+				if(move2.equals ("00") && TTTboard[0][0] == '-')
+					{
+							TTTboard[0][0] = 'X';
+					}
+				if(move2.equals ("01") && TTTboard[0][1] == '-')
+				{
+						TTTboard[0][1] = 'X';
+				}
+				if(move2.equals ("02") && TTTboard[0][2] == '-')
+				{
+						TTTboard[0][2] = 'X';
+				}
+				if(move2.equals ("10") && TTTboard[1][0] == '-')
+				{
+						TTTboard[1][0] = 'X';
+				}
+				if(move2.equals ("11") && TTTboard[1][1] == '-')
+				{
+						TTTboard[1][1] = 'X';
+				}
+				if(move2.equals ("12") && TTTboard[1][2] == '-')
+				{
+						TTTboard[1][2] = 'X';
+				}
+				if(move2.equals ("20") && TTTboard[2][0] == '-')
+				{
+						TTTboard[2][0] = 'X';
+				}
+				if(move2.equals ("21") && TTTboard[2][1] == '-')
+				{
+						TTTboard[2][1] = 'X';
+				}
+				if(move2.equals ("22") && TTTboard[2][2] == '-')
+				{
+						TTTboard[2][2] = 'X';
+						
+						while(!end)
+						{
+							for(int i = 0; i < 3; i++)
+							{
+								for(int j = 0; j < 3; j++)
+								{
+									System.out.print(TTTboard[i][j]+ " ");
+								}
+								System.out.println();
+							}
+							Thread.sleep(2000);
 				}
 				
 			
@@ -111,6 +181,8 @@ public class TicTacToe {
 	}
 
 	}
+}
+}
 
 
 
