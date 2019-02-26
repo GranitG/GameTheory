@@ -161,17 +161,7 @@ public class TicTacToe {
 				{
 						TTTboard[2][2] = 'X';
 						
-						while(!end)
-						{
-							for(int i = 0; i < 3; i++)
-							{
-								for(int j = 0; j < 3; j++)
-								{
-									System.out.print(TTTboard[i][j]+ " ");
-								}
-								System.out.println();
-							}
-							Thread.sleep(2000);
+	
 				}
 				
 			
@@ -182,7 +172,7 @@ public class TicTacToe {
 
 	}
 }
-}
+
 
 
 
