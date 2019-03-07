@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-//add a public class called move to loop the move of player 2
+
 /**
  * @author Maciej Sudol
  * CSIT357-02 Artificial Intelligence
@@ -12,6 +12,9 @@ public class TicTacToe {
 	
 	public static char TTTboard[][] = new char[3][3];
 	public static boolean end = false;//when end = true, the game should end
+	public static boolean winner1 = false;
+	public static boolean winner2 = false;
+	
 
 	public static void main(String[] args) throws InterruptedException{
 		
@@ -115,6 +118,7 @@ public class TicTacToe {
 						System.out.println();
 					}
 					Thread.sleep(2000);
+				
 					
 				//getting move of player 2
 				System.out.println("\nEnter your move player 2");
@@ -233,6 +237,7 @@ public class TicTacToe {
 						System.out.println();
 					}
 					Thread.sleep(2000);
+				
 					
 				//getting move of player 2
 				System.out.println("\nEnter your move player 2");
@@ -352,6 +357,7 @@ public class TicTacToe {
 					}
 					Thread.sleep(2000);
 					
+					
 				//getting move of player 2
 				System.out.println("\nEnter your move player 2");
 				System.out.println("\nList of moves, except for spaces already occupied "
@@ -469,6 +475,7 @@ public class TicTacToe {
 						System.out.println();
 					}
 					Thread.sleep(2000);
+				
 					
 				//getting move of player 2
 				System.out.println("\nEnter your move player 2");
@@ -586,24 +593,22 @@ public class TicTacToe {
 						System.out.println();
 					}
 					Thread.sleep(4000);
-					
-					
+					return;
 				
-			
-			}
+			}	
 		}
-	
-	}
-
+				}
 	}
 }
 				}
 			}
-		}
+		}			
 	}
 			}
 		}
 	}
+
+
 }
 
 
